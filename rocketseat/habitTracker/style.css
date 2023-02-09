@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap");
+
+/* o asterisco é p selecionar TODOS os elemntos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+
+  /*display: grid; /* visualização dos elementos */
+  /*place-items: center; /* centraliza no meio do display */
+
+  height: 100vh; /* viewport heigth = altura visivel */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  /* pega a largura do header e coloca espaço entre os elementos */
+  justify-content: space-between;
+  padding: 48px;
+  position: fixed;
+  width: 100%;
+}
+
+button {
+  padding: 16px 24px;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+
+  display: flex; /* disposição do elemento dentro do elemento */
+  align-items: center; /* so funciona se o flex ta ativado (deixa os elemntos flexiveis */
+
+  /* gap é o espaço entre os elementos dentro de um box */
+  gap: 12px;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  /*  primeira proriedade em cima
+      segunda em laterais
+      terceira em baixo */ 
+
+  padding: 182px 48px 48px;
+
+  /* fit-content significa encaixe o conteudo 'na largura' */ 
+  width: fit-content;
+
+
+}
+
+.habits {
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+
+
+
+}
+
+.habit {
+
+    border: 1px solid;
+    
+    width: 64px;
+    height: 64px;
+
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days {
+  display: flex;
+  margin-left: 32px;
+  gap: 48px;
+}
+
+.day {
+  display: flex;
+  /* direção da flexibilidade do display */
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  color: #a1a1aa;
+  font-size: 20px;
+  line-height: 125%;
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none; /* navegadores especificos */
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background: #18181b;
+}
+
+/* pseudo-seletor, compara com o outro input */
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+
+/*uso p celulares, de 0 a 570 px */
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
